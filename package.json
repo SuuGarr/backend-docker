@@ -1,0 +1,25 @@
+{
+  "name": "new1web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "core-util-is": "^1.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.2.2",
+    "route": "^0.2.5",
+    "routes": "^2.1.0",
+    "scheme": "^0.0.1",
+    "schemes": "^1.4.0",
+    "simple-encryptor": "^4.0.0",
+    "uri-scheme": "^1.1.0",
+    "webpack-dev-server": "^4.15.0"
+  }
+}

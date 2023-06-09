@@ -1,0 +1,11 @@
+show dbs
+db.users.find()
+db.user.find()
+db.users.insert({firstname: "Ben",lastname:"Cha",email:"ben@gmail.com",password:"1234"})
+db.user.find
+db.user.fine
+db.user.insert({firstname: "Ben",lastname:"Cha",email:"ben@gmail.com",password:"1234"})
+use mydb
+show dbs
+db. users
+use mydb
