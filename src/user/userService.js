@@ -22,7 +22,6 @@ module.exports.createUserDBService = (userDetails) => {
             });
     });
 };
-//add chk email
 module.exports.checkEmailExistence = async (email) => {
     try {
       const user = await userModel.findOne({ email });
@@ -32,7 +31,6 @@ module.exports.checkEmailExistence = async (email) => {
       return false;
     }
   };
-//MongooseError: Model.findOne() no longer accepts a callback ใช้ .exec() แทน
 module.exports.loginUserDBService = (userDetails) => {
     return new Promise((resolve, reject) => {
         userModel.findOne({ email: userDetails.email }).exec()
@@ -55,31 +53,3 @@ module.exports.loginUserDBService = (userDetails) => {
     });
 }
 
-//MongooseError: Model.findOne() no longer accepts a callback
-/* module.exports.loginUserDBService = (userDetails) => {
-    return new Promise(function myFn(resolve, reject) {
-        userModel.findOne({ email: userDetails.email }, function getresult(errorvalue, result) {
-            if (errorvalue) {
-                reject({ status: false, msg: "Invaild Data" });
-            }
-            else {
-                if (result != undefined && result != null) {
-                    var decrypted = encryptor.decrypt(result.password);
-
-                    if (decrypted == userDetails.password) {
-                        resolve({ status: true, msg: "user Validated Successfully" });
-                    }
-                    else {
-                        reject({ status: false, msg: "user Validated failed" });
-                    }
-                }
-                else {
-                    reject({ status: false, msg: "user Error Detailssss" });
-                }
-
-            }
-
-        });
-
-    });
-} */
