@@ -1,11 +1,3 @@
-#FROM node:16.20
-#WORKDIR /usr/src/app
-#COPY package*.json ./
-#RUN npm install 
-#EXPOSE $PORT
-#COPY . /usr/src/app
-#EXPOSE 3000
-#CMD ["npm", "start"]
 FROM node:16.20
 WORKDIR /app
 COPY package*.json ./
