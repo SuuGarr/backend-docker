@@ -1,23 +1,4 @@
 var userService = require('./userService');
-//code before add chk mail(can use)
-/* var createUserControllerFn = async (req, res) => {
-    try {
-        console.log(req.body);
-        var status = await userService.createUserDBService(req.body);
-        console.log(status);
-
-        if (status) {
-            res.send({ "status": true, "message": "User created successfully" });
-        } else {
-            res.send({ "status": false, "message": "Error creating user" });
-        }
-    } catch (error) {
-        console.error(error);
-        res.send({ "status": false, "message": "An error occurred while creating the user" });
-    }
-}; */
-
-//after add chk mail 
 
 var createUserControllerFn = async (req, res) => {
     try {
@@ -55,7 +36,6 @@ var loginUserControllerFn = async (req, res) => {
     }
 };
 
-//เพิ่ม Check email ถ้าจะ Error ก็ตั้งแต่บรรทัดนี้ข้างบนถูกแล้ว 
 const checkEmailControllerFn = async (req, res) => {
     try {
       const email = req.body.email;
